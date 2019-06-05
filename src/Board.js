@@ -72,8 +72,8 @@ class Board extends Component {
     return(
       <div>
         <div className="Board-title">
-          <span className="neon-orange">Lights</span>
-          <span className="neon-blue">Out</span>
+          <div className="neon-orange">Lights</div>
+          <div className="neon-blue">Out</div>
         </div>
         <table className="Board">
           <tbody>
