@@ -70,24 +70,34 @@ class Board extends Component {
 
   displayBoard = () => {
     return(
-      <table className="Board">
-        <tbody>
-          {this.state.board.map((arr, y) => {
-            let row = arr.map((tf, x) => {
-              return (
-                <Cell key={`${y}-${x}`} id={`${y}-${x}`} isLit={tf} flipCellsAroundMe={this.flipCellsAround}/>
-              )
-            });
-            return <tr key={`row${y}`}>{row}</tr>
-          })}
-        </tbody>
-      </table>
+      <div>
+        <div className="Board-title">
+          <span className="neon-orange">Lights</span>
+          <span className="neon-blue">Out</span>
+        </div>
+        <table className="Board">
+          <tbody>
+            {this.state.board.map((arr, y) => {
+              let row = arr.map((tf, x) => {
+                return (
+                  <Cell key={`${y}-${x}`} id={`${y}-${x}`} isLit={tf} flipCellsAroundMe={this.flipCellsAround}/>
+                )
+              });
+              return <tr key={`row${y}`}>{row}</tr>
+            })}
+          </tbody>
+        </table>
+      </div>
+      
     );
   }
 
   displayWinner = () => {
     return (
-      <h1>You Win!!</h1>
+      <div className="winner">
+        <span className="neon-orange">YOU</span>
+        <span className="neon-blue">WIN!</span>
+      </div>
     )
   }
 
