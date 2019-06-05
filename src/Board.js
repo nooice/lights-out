@@ -20,7 +20,7 @@ class Board extends Component {
     super(props);
     this.state = ({
       hasWon: false,
-      board: this.props.testBoard
+      board: this.createBoard()
     })
   }
 
